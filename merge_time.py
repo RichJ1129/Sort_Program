@@ -50,5 +50,6 @@ def main():
     print("Size of n: ", len(rand_num_list))
     print("Elapsed Time: ", elapsed, " seconds")
 
+
 if __name__ == "__main__":
     main()
