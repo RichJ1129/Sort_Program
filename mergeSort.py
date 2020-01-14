@@ -42,8 +42,6 @@ def file_handling(content):
     line_list = []
     new_num = ""
 
-    print(content)
-
     for i in range(len(content)):
         if content[i] == " ":
             line_list.append(new_num)
