@@ -9,10 +9,12 @@ def insert_sort(array):
 
         array[pos] = curr
 
-def printList(arr):
+
+def print_list(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
+
 
 def file_handling(content):
     data_map = {}
@@ -53,7 +55,7 @@ def main():
         new_list = list(data_map[key])
         new_list = [int(i) for i in new_list]
         insert_sort(new_list)
-        printList(new_list)
+        print_list(new_list)
 
 
 if __name__ == "__main__":

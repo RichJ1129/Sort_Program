@@ -2,9 +2,9 @@ def merge_sort(array):
     # array = [int(i) for i in array]
 
     if len(array) > 1:
-        mid_num = len(array) // 2 #Find the middle of the list "//" used so that integer is returned
-        left = array[:mid_num] # Gets the elements to the left of middle number
-        right = array[mid_num:] # Holds elements to the right of the middle number including middle number
+        mid_num = len(array) // 2  # Find the middle of the list "//" used so that integer is returned
+        left = array[:mid_num]  # Gets the elements to the left of middle number
+        right = array[mid_num:]  # Holds elements to the right of the middle number including middle number
 
         merge_sort(left)
         merge_sort(right)
@@ -32,7 +32,8 @@ def merge_sort(array):
             j += 1
             k += 1
 
-def printList(arr):
+
+def print_list(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
@@ -67,6 +68,7 @@ def file_handling(content):
 
     return data_map
 
+
 def main():
     data_file = open("data.txt")
     data_content = data_file.read()
@@ -76,7 +78,7 @@ def main():
         new_list = list(data_map[key])
         new_list = [int(i) for i in new_list]
         merge_sort(new_list)
-        printList(new_list)
+        print_list(new_list)
 
 if __name__ == "__main__":
     main()
