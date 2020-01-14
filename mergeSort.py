@@ -80,5 +80,6 @@ def main():
         merge_sort(new_list)
         print_list(new_list)
 
+
 if __name__ == "__main__":
     main()
