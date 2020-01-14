@@ -1,6 +1,7 @@
 import random
 import time
 
+
 def insert_sort(array):
     for i in range(1, len(array)):
         curr = array[i]
@@ -11,6 +12,7 @@ def insert_sort(array):
             pos -= 1
 
         array[pos] = curr
+
 
 def random_num_gen():
     new_num = input("Hi how many numbers would you like to generate? ")
@@ -26,8 +28,6 @@ def main():
     elapsed = (time.perf_counter() - start)
     print("Size of n: ", len(rand_num_list))
     print("Elapsed Time: ", elapsed, "seconds")
-
-
 
 
 if __name__ == "__main__":

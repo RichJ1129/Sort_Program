@@ -1,6 +1,7 @@
 import random
 import time
 
+
 def merge_sort(array):
     if len(array) > 1:
         mid_num = len(array) // 2  # Find the middle of the list "//" used so that integer is returned
