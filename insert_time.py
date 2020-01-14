@@ -25,7 +25,8 @@ def main():
     insert_sort(rand_num_list)
     elapsed = (time.perf_counter() - start)
     print("Size of n: ", len(rand_num_list))
-    print("Elapsed Time: ", elapsed)
+    print("Elapsed Time: ", elapsed, "seconds")
+
 
 
 
