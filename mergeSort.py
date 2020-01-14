@@ -1,6 +1,4 @@
 def merge_sort(array):
-    # array = [int(i) for i in array]
-
     if len(array) > 1:
         mid_num = len(array) // 2  # Find the middle of the list "//" used so that integer is returned
         left = array[:mid_num]  # Gets the elements to the left of middle number
