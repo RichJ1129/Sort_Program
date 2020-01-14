@@ -10,10 +10,10 @@ def insert_sort(array):
         array[pos] = curr
 
 
-def print_list(arr):
+def print_list(arr, file_write):
     for i in range(len(arr)):
-        print(arr[i], end=" ")
-    print()
+        file_write.write(str(arr[i]) + " ")
+    file_write.write("\n")
 
 
 def file_handling(content):
@@ -50,12 +50,15 @@ def main():
     data_file = open("data.txt")
     data_content = data_file.read()
     data_map = file_handling(data_content)
+    file_ouput = open("insert.out", "w+")
 
     for key in data_map:
         new_list = list(data_map[key])
         new_list = [int(i) for i in new_list]
         insert_sort(new_list)
-        print_list(new_list)
+        print_list(new_list, file_ouput)
+
+    file_ouput.close()
 
 
 if __name__ == "__main__":
