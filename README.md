@@ -1,7 +1,7 @@
 # Sort_Program
 ### Created by Richard Joseph
 #### Testing insertSort.py and mergeSort.py
-1) Run the following commands on the flip servers 'python3 insertSort.py' or 'python3 mergesort.py'
+1) Run the following commands on the flip servers 'python3 insertSort.py' or 'python3 mergesort.py'. Must make sure 'data.txt' is in the same directory as programs. Each line will be sorted individually.
 2) Once finished it will output either a merge.out or insert.out file.
 3) To view the files you can use either vim or nano. Type in 'nano merge.out' to view the merge file.
 
