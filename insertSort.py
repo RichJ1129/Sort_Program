@@ -50,15 +50,15 @@ def main():
     data_file = open("data.txt")
     data_content = data_file.read()
     data_map = file_handling(data_content)
-    file_ouput = open("insert.out", "w+")
+    file_output = open("insert.out", "w+")
 
     for key in data_map:
         new_list = list(data_map[key])
         new_list = [int(i) for i in new_list]
         insert_sort(new_list)
-        print_list(new_list, file_ouput)
+        print_list(new_list, file_output)
 
-    file_ouput.close()
+    file_output.close()
 
 
 if __name__ == "__main__":

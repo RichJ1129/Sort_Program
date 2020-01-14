@@ -21,7 +21,7 @@ def merge_sort(array):
             k += 1
 
         while i < len(left):
-            array[k]  = left[i]
+            array[k] = left[i]
             i += 1
             k += 1
 
@@ -71,15 +71,15 @@ def main():
     data_file = open("data.txt")
     data_content = data_file.read()
     data_map = file_handling(data_content)
-    file_ouput = open("merge.out", "w+")
+    file_output = open("merge.out", "w+")
 
     for key in data_map:
         new_list = list(data_map[key])
         new_list = [int(i) for i in new_list]
         merge_sort(new_list)
-        print_list(new_list, file_ouput)
+        print_list(new_list, file_output)
 
-    file_ouput.close()
+    file_output.close()
 
 
 if __name__ == "__main__":
