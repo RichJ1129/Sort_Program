@@ -47,11 +47,13 @@ def file_handling(content):
 def main():
     data_file = open("data.txt")
     data_content = data_file.read()
-    file_handling(data_content)
+    data_map = file_handling(data_content)
 
-    array = [10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-    insert_sort(array)
-    # printList(array)
+    for key in data_map:
+        new_list = list(data_map[key])
+        new_list = [int(i) for i in new_list]
+        insert_sort(new_list)
+        printList(new_list)
 
 
 if __name__ == "__main__":

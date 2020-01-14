@@ -1,4 +1,6 @@
 def merge_sort(array):
+    # array = [int(i) for i in array]
+
     if len(array) > 1:
         mid_num = len(array) // 2 #Find the middle of the list "//" used so that integer is returned
         left = array[:mid_num] # Gets the elements to the left of middle number
@@ -68,12 +70,13 @@ def file_handling(content):
 def main():
     data_file = open("data.txt")
     data_content = data_file.read()
-    file_handling(data_content)
+    data_map = file_handling(data_content)
 
-    array = [10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-    merge_sort(array)
-    printList(array)
-
+    for key in data_map:
+        new_list = list(data_map[key])
+        new_list = [int(i) for i in new_list]
+        merge_sort(new_list)
+        printList(new_list)
 
 if __name__ == "__main__":
     main()
